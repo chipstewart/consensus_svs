@@ -1,0 +1,4 @@
+{
+  "extract_dRanger_intermediates_workflow.extract_dRanger_intermediates.id": "REBC-AC8P-TP-NT",
+  "extract_dRanger_intermediates_workflow.extract_dRanger_intermediates.dRanger_intermediates": "gs://fc-9c84e685-79f8-4d84-9e52-640943257a9b/e0f42a0e-dbe9-453e-9dce-38831f8595b7/pcawg_full_workflow/6e29176c-f523-445d-ac2c-bd4ecb2b2a26/call-pcawg_full/output_files/dRanger_intermediates.tar"
+}

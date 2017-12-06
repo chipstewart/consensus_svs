@@ -1,0 +1,16 @@
+[task]
+####
+# Command line to be invoked to run this job
+####
+command: <matlab-2016a>  <libdir>SV_cluster_forBP  ${t pair_id} ${t clustering.window} ${t alg1} ${t forBP1} ${t alg2} ${t,o forBP2} ${t,o alg3} ${t,o forBP3} ${t,o alg4} ${t,o forBP4}
+installTarget=firehose
+description: cluster SV algorithms in forBP format for subsequent Breakpointer processing.
+author: chip
+projectDirs: .:../../../../matlab
+build: sh /xchip/tcga/Tools/Matlab/compileMatlab.sh -v .matlab-2016a < build.m
+
+[runtime]
+executor: LSF
+
+[job.spec.memory]
+

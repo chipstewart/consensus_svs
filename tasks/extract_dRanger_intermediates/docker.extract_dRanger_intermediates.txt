@@ -1,0 +1,61 @@
+FROM ubuntu:14.04
+
+MAINTAINER Chip  <stewart@broadinstitue.org>
+ENV TERM=vt100
+
+
+RUN \
+  sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
+  apt-get update && \
+  apt-get -y upgrade && \
+  apt-get install -y build-essential && \
+  apt-get install -y software-properties-common && \
+  apt-get install -y byobu curl git htop man unzip vim wget perl gzip && \
+  rm -rf /var/lib/apt/lists/*
+
+
+
+#// Set environment variables.
+ENV HOME /root
+WORKDIR /root
+
+
+RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" | tee -a /etc/apt/sources.list
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu trusty main universe" | tee -a /etc/apt/sources.list
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+
+
+#RUN apt-get install -y python-software-properties
+
+
+#Load C++ libraries
+RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
+RUN apt-get -y update
+RUN apt-get -y --force-yes upgrade
+RUN apt-get -y dist-upgrade
+
+
+RUN apt-get install -y samtools
+
+#will it work to go into a mounted dir?
+WORKDIR /opt/src
+
+#ENV PS1="\\u@\\h:\\w\\$"
+RUN rm -f /root/.scripts/git-prompt.sh
+
+#Set timezone on Docker instance to something other than UCT.
+RUN echo "America/New_York" | sudo tee /etc/timezone; dpkg-reconfigure --frontend noninteractive tzdata
+
+
+ENV CACHE_UPDATE 4
+
+RUN apt-get install -y dstat
+COPY src /opt/src
+
+ENV LD_LIBRARY_PATH=
+#COPY ../../algutil /opt/src/algutil
+
+RUN chmod go+w /opt/src
+
+RUN chmod go+wrx /home
+ENV HOME /home

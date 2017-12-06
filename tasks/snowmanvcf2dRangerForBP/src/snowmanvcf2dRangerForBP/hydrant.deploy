@@ -1,0 +1,16 @@
+[task]
+####
+# Command line to be invoked to run this job
+####
+command: <matlab-2016a>  <libdir>snowmanvcf2dRangerForBP ${t VCF} ${t normpaneldb} ${t use_PoN_JH} ${t minscoreforbp} ${t build_Rmat} ${t min.span} ${t max.pon} ${t max.norm} ${t min.tum.SR} ${t min.tum.RP} ${t min.tum}
+installTarget=firehose
+description: convert snowman VCF to dRanger forBP for subsequent processing.
+author: chip
+projectDirs: .:../../../../matlab
+build: sh /xchip/tcga/Tools/Matlab/compileMatlab.sh -v .matlab-2016a < build.m
+
+[runtime]
+executor: LSF
+
+[job.spec.memory]
+

@@ -1,0 +1,7 @@
+{
+  "dRangerDetailsFilter_workflow.dRangerDetailsFilter.max_normal_count_threshold": "1",
+  "dRangerDetailsFilter_workflow.dRangerDetailsFilter.dRanger_input_file": "gs://fc-9c84e685-79f8-4d84-9e52-640943257a9b/042afb57-9313-4dd5-8a3d-47fc3eb62527/breakpointer_workflow/4eff9fec-392b-471d-bfa0-73d480e7d147/call-breakpointer/attempt-2/output_files/sample.broad-breakpointer.DATECODE.somatic.sv.detail.txt.gz",
+  "dRangerDetailsFilter_workflow.dRangerDetailsFilter.pair_id": "REBC-AC97-TP-NB",
+  "dRangerDetailsFilter_workflow.dRangerDetailsFilter.min_tumor_count_threshold": "4",
+  "dRangerDetailsFilter_workflow.dRangerDetailsFilter.outputdir": "./"
+}

@@ -1,0 +1,12 @@
+{
+  "mantavcf2dRangerForBP_workflow.mantavcf2dRangerForBP.minspan": "250",
+  "mantavcf2dRangerForBP_workflow.mantavcf2dRangerForBP.minscoreforbp": "0.001",
+  "mantavcf2dRangerForBP_workflow.mantavcf2dRangerForBP.mintumorSR": "0",
+  "mantavcf2dRangerForBP_workflow.mantavcf2dRangerForBP.maxpon": "1",
+  "mantavcf2dRangerForBP_workflow.mantavcf2dRangerForBP.refdata1": "gs://firecloud-tcga-open-access/tutorial/reference/public_full10.tar.gz",
+  "mantavcf2dRangerForBP_workflow.mantavcf2dRangerForBP.maxnorm": "2",
+  "mantavcf2dRangerForBP_workflow.mantavcf2dRangerForBP.PAIRID": "REBC-A90D-TP-NB-BI",
+  "mantavcf2dRangerForBP_workflow.mantavcf2dRangerForBP.manta_sv_VCF": "gs://fc-9c84e685-79f8-4d84-9e52-640943257a9b/a4648d79-708a-4554-8fbf-d01cfa4b78ad/manta_workflow/4818bf8c-8ff3-497d-aefa-a3ba4f2a5e58/call-manta/REBC-A90D-TP-NB-BI.manta.somaticSV.vcf",
+  "mantavcf2dRangerForBP_workflow.mantavcf2dRangerForBP.mintumorRP": "2",
+  "mantavcf2dRangerForBP_workflow.mantavcf2dRangerForBP.mintumor": "4"
+}

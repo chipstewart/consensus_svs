@@ -1,0 +1,12 @@
+{
+  "SV_cluster_forBP_workflow.SV_cluster_forBP.pair_id": "REBC-A90D-TP-NB-BI",
+  "SV_cluster_forBP_workflow.SV_cluster_forBP.clustering_window": "50",
+  "SV_cluster_forBP_workflow.SV_cluster_forBP.alg1": "dRanger",
+  "SV_cluster_forBP_workflow.SV_cluster_forBP.forBP1": "gs://fc-9c84e685-79f8-4d84-9e52-640943257a9b/e9b227ef-aa76-49b8-9cf6-cfdc4d8f312f/extract_dRanger_intermediates_workflow/7d502f2c-c86e-4536-8112-078e25847715/call-extract_dRanger_intermediates/REBC-A90D-TP-NB-BI.dRanger_results.forBP.txt",
+  "SV_cluster_forBP_workflow.SV_cluster_forBP.alg2": "pcawg_snowman",
+  "SV_cluster_forBP_workflow.SV_cluster_forBP.forBP2": "gs://fc-9c84e685-79f8-4d84-9e52-640943257a9b/2831c835-661c-4241-baad-042f104839df/pcawg_snowmanvcf2dRangerForBP_workflow/8d301465-89f1-4e8c-bf3f-923e9ea6d547/call-pcawg_snowmanvcf2dRangerForBP/attempt-2/REBC-A90D-TP-NB-BI.snowman_results.forBP.txt",
+  "SV_cluster_forBP_workflow.SV_cluster_forBP.alg30": "SvABA",
+  "SV_cluster_forBP_workflow.SV_cluster_forBP.forBP30": "gs://fc-9c84e685-79f8-4d84-9e52-640943257a9b/1b6dfbeb-1640-4163-84ef-c94b348c6a82/snowmanvcf2dRangerForBP_workflow/b6efc2e8-1004-4a68-924f-ab790727cbfd/call-snowmanvcf2dRangerForBP/REBC-A90D-TP-NB-BI.snowman_results.forBP.txt",
+  "SV_cluster_forBP_workflow.SV_cluster_forBP.alg40": "(optional) String?",
+  "SV_cluster_forBP_workflow.SV_cluster_forBP.forBP40": "(optional) File?"
+}

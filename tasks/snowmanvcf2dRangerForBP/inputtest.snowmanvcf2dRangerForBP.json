@@ -1,0 +1,12 @@
+{
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.minspan": "250",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.minscoreforbp": "0.001",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.mintumorSR": "1",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.maxpon": "1",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.refdata1": "gs://firecloud-tcga-open-access/tutorial/reference/public_full10.tar.gz",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.maxnorm": "1",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.PAIRID": "REBC-A90D-TP-NB-BI",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.snowman_sv_VCF": "gs://fc-9c84e685-79f8-4d84-9e52-640943257a9b/9b03261c-7e72-4c2e-89b6-97066206c77f/svabaSomatic/5a951d54-96ba-4719-9d33-a8b626492481/call-svabaCall/REBC-A90D-TP-NB-BI.svaba.somatic.sv.vcf",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.mintumorRP": "0",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.mintumor": "4"
+}

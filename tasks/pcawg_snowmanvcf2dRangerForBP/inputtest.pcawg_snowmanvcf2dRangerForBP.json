@@ -1,0 +1,12 @@
+{
+  "pcawg_snowmanvcf2dRangerForBP_workflow.pcawg_snowmanvcf2dRangerForBP.minspan": "250",
+  "pcawg_snowmanvcf2dRangerForBP_workflow.pcawg_snowmanvcf2dRangerForBP.minscoreforbp": "0.001",
+  "pcawg_snowmanvcf2dRangerForBP_workflow.pcawg_snowmanvcf2dRangerForBP.mintumorSR": "1",
+  "pcawg_snowmanvcf2dRangerForBP_workflow.pcawg_snowmanvcf2dRangerForBP.maxpon": "1",
+  "pcawg_snowmanvcf2dRangerForBP_workflow.pcawg_snowmanvcf2dRangerForBP.refdata1": "gs://firecloud-tcga-open-access/tutorial/reference/public_full10.tar.gz",
+  "pcawg_snowmanvcf2dRangerForBP_workflow.pcawg_snowmanvcf2dRangerForBP.maxnorm": "1",
+  "pcawg_snowmanvcf2dRangerForBP_workflow.pcawg_snowmanvcf2dRangerForBP.PAIRID": "REBC-A90D-TP-NB-BI",
+  "pcawg_snowmanvcf2dRangerForBP_workflow.pcawg_snowmanvcf2dRangerForBP.snowman_sv_VCF": "gs://fc-9c84e685-79f8-4d84-9e52-640943257a9b/82fd5fe5-0636-4bdd-9396-3f54cab21a85/pcawg_full_workflow/2cf50388-175f-4a91-a20c-b7d5cf338e8c/call-pcawg_full/output_files/sample.broad-snowman.DATECODE.somatic.sv.vcf.gz",
+  "pcawg_snowmanvcf2dRangerForBP_workflow.pcawg_snowmanvcf2dRangerForBP.mintumorRP": "0",
+  "pcawg_snowmanvcf2dRangerForBP_workflow.pcawg_snowmanvcf2dRangerForBP.mintumor": "4"
+}

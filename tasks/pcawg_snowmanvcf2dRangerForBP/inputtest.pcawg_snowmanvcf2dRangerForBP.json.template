@@ -1,0 +1,12 @@
+{
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.minspan": "String",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.minscoreforbp": "String",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.mintumorSR": "String",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.maxpon": "String",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.refdata1": "File",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.maxnorm": "String",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.PAIRID": "String",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.snowman_sv_VCF": "File",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.mintumorRP": "String",
+  "snowmanvcf2dRangerForBP_workflow.snowmanvcf2dRangerForBP.mintumor": "String"
+}
