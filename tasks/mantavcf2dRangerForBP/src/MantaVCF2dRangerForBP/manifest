@@ -1,5 +1,5 @@
 # Written by Hydrant
-# 2017-12-06 11:30:25
+# 2017-12-20 09:27:16
 
 name=MantaVCF2dRangerForBP
 description=convert Manta VCF to dRanger forBP for subsequent processing.
@@ -155,13 +155,13 @@ JVMLevel=1.6
 os=any
 pipelineModel=
 privacy=
-publicationDate=12/06/2017 11:30
+publicationDate=12/20/2017 09:27
 quality=
 requiredPatchLSIDs=
 requiredPatchURLs=
 serializedModel=
 taskType=
 userid=
-LSID=urn:lsid:broadinstitute.org:cancer.genome.analysis:11421:3
+LSID=urn:lsid:broadinstitute.org:cancer.genome.analysis:11421:6
 executor=LSF
 default.memory.gigabytes=1
