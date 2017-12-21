@@ -22,7 +22,7 @@ task snowmanvcf2dRangerForBP {
     command {
 cat <<EOF > pyscript.py
 
-import subprocess,os
+import subprocess,os,glob
 def run(cmd):
     print('about to run')
     print(cmd)
@@ -88,6 +88,12 @@ cmd = 'python /opt/src/algutil/firehose_module_adaptor/run_module.py --module_li
 run(cmd)
 
 run('ls -latr ')
+
+outfile = '${PAIRID}' + '.snowman_results.forBP.txt'
+outlist = glob.glob('*.snowman_results.forBP.txt')
+if outlist[0] != outfile: 
+  cmd = 'cp ' + outlist[0]  + ' ' + outfile 
+  run(cmd)
 
 import time
 #time.sleep(999999999)
