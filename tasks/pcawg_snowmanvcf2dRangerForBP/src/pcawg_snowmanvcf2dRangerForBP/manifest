@@ -1,5 +1,5 @@
 # Written by Hydrant
-# 2017-11-11 16:34:12
+# 2017-12-20 10:35:47
 
 name=pcawg_snowmanvcf2dRangerForBP
 description=convert snowman VCF to dRanger forBP for subsequent processing.
@@ -144,13 +144,13 @@ JVMLevel=1.6
 os=any
 pipelineModel=
 privacy=
-publicationDate=11/11/2017 16:34
+publicationDate=12/20/2017 10:35
 quality=
 requiredPatchLSIDs=
 requiredPatchURLs=
 serializedModel=
 taskType=
 userid=
-LSID=urn:lsid:broadinstitute.org:cancer.genome.analysis:11416:3
+LSID=urn:lsid:broadinstitute.org:cancer.genome.analysis:11416:5
 executor=LSF
 default.memory.gigabytes=1
