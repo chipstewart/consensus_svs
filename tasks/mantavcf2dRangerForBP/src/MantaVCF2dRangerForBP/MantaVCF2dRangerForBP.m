@@ -65,6 +65,12 @@ end
 
 
 if length(V.CHROM)<1
+    
+    fname1 = [individual '.' P.results_name '.forBP.raw.tsv'];
+    fprintf('Saving %s\n',fname1);
+    %save_struct(Xbp,fname);
+    printStruct(V,-1, fname1);
+
     L='individual	num	chr1	str1	pos1	chr2	str2	pos2	class	span	tumreads	normreads	normpanelbins	min1max1	range1	stdev1	min2	max2	range2	stdev2	gene1	site1	gene2	site2	fusion	fmapqzT1	fmapqzN1	fmapqzT2	fmapqzN2	nuwpT1	nuwpN1	nuwpT2	nuwpN2	zstdev1	zstdev2	quality	score	somatic	somatic_score	BPtry	t_alt_RP	t_alt_SR	t_depn_alt_RP	n_alt_SR	n_dep'
     fname = [individual '.' P.results_name '.forBP.txt'];
     fid=fopen(fname,'wt');
@@ -259,6 +265,9 @@ if VE.N>0
     q=regexp(VE.INFO,'END=\w+;','match'); q= [q{:}]'; q=regexprep(q,'END=',''); q=regexprep(q,';','');
     VE.END=str2double(q);
 else
+    disp('%%%') 
+    disp(' no break ends in Manta VCF') 
+    disp('%%%') 
     VE.END=VE.POS
     VE.STRANDS=VE.ID
 end
