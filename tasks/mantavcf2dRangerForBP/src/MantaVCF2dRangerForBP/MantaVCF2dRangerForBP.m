@@ -118,7 +118,9 @@ V=trimStruct(V,k);
 V.ID0=regexprep(V.ID,':.$','');
 t=tab(V.ID0)
 q=regexp(V.INFO,'MATEID=.+\;','match')
-q=cellfun(@(x) x{1}, regexp([q{:}]',';','split'),'UniformOutput', false)
+if  ~isempty(q)
+   q=cellfun(@(x) x{1}, regexp([q{:}]',';','split'),'UniformOutput', false)
+end
 q=regexprep(q,'MATEID=','')
 V.MID=q;
 
@@ -161,14 +163,16 @@ X.class=repmat({'deletion'},size(X.chr1));
 X.span=NaN(size(X.chr1));
 k=find(X.chr1==X.chr2);
 X.span(k)=X.pos2(k)-X.pos1(k);
-k=find( (X.chr1==X.chr2) & X.span<1e6 & X.str2==X.str1  );
-X.class(k)={'inversion'};
-k=find( (X.chr1==X.chr2) & X.span<1e6 & X.str2==0 &  X.str1==1  );
-X.class(k)={'tandem_dup'};
-k=find( X.chr1~=X.chr2) ;
-X.class(k)={'inter_chr'};
-k=find( (X.chr1==X.chr2) & X.span>1e6  );
-X.class(k)={'long_range'};
+if length(X.span)>0
+    k=find( (X.chr1==X.chr2) & X.span<1e6 & X.str2==X.str1  );
+    X.class(k)={'inversion'};
+    k=find( (X.chr1==X.chr2) & X.span<1e6 & X.str2==0 &  X.str1==1  );
+    X.class(k)={'tandem_dup'};
+    k=find( X.chr1~=X.chr2) ;
+    X.class(k)={'inter_chr'};
+    k=find( (X.chr1==X.chr2) & X.span>1e6  );
+    X.class(k)={'long_range'};
+end
 
 
 qFMT=regexp(V1.FORMAT,':','split');%qFMT=[qFMT{:}];
@@ -240,7 +244,9 @@ X.somatic_score=NaN(size(X.chr1));
 X.BPtry=ones(size(X.chr1));
 
 X.quality=ones(size(X.quality));
-X.score=X.tumreads.*X.quality;
+if length(X.quality)>0
+    X.score=X.tumreads.*X.quality;
+end
 X.somatic_score=X.score;
 
 X.t_alt_RP=talt;
@@ -282,8 +288,8 @@ X2.chr2=chrom2num(VE.CHROM);
 X2.str2=zeros(size(X2.chr2));
 X2.pos2=VE.END;
 if VE.N>0
-    X2.str1=ismember(substring(VE.STRANDS,1,1),'-');
-    X2.str2=ismember(substring(VE.STRANDS,2,1),'-');
+    X2.str1=1*ismember(substring(VE.STRANDS,1,1),'-');
+    X2.str2=1*ismember(substring(VE.STRANDS,2,1),'-');
 end
     
 X2.class=repmat({'deletion'},size(X2.chr1));
@@ -298,6 +304,9 @@ k=find( X2.chr1~=X2.chr2) ;
 X2.class(k)={'inter_chr'};
 k=find( (X2.chr1==X2.chr2) & X2.span>1e6  );
 X2.class(k)={'long_range'};
+
+X2.str1=cellstr(num2str(X2.str1));
+X2.str2=cellstr(num2str(X2.str2));
 
 
 qFMT=regexp(VE.FORMAT,':','split');%qFMT=[qFMT{:}];
@@ -383,8 +392,12 @@ X2.n_alt_SR=nsr;
 X2.n_dep=ndep;
 X2.STRANDS=VE.STRANDS;
  
-
-X=mergeStruct(X,X2);
+if length(X.chr1)>0
+    X=mergeStruct(X,X2);
+else
+    X=X2;
+    X.N=length(X.chr1);
+end
 X.num=(1:X.N)';
 
 fname1 = [individual '.' P.results_name '.forBP.raw.tsv'];
